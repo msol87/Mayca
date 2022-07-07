@@ -1,0 +1,284 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.contenedorGeneral {
+    width: 99%;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    margin: 5px auto;
+    display: grid;
+    grid-gap: 10px;
+    grid-template-columns: (3, 1fr);
+    grid-template-rows: repeat (5, auto);
+    grid-template-areas:
+        "header header header"
+        "inicio inicio aside"
+        "galeria galeria galeria"
+        "footer footer footer"
+}
+
+.header {
+    grid-area: header;
+    background-color: rgb(222, 207, 193);
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    align-content: center;
+    justify-items: center;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+.logoPpal {
+    width: 200px;
+}
+
+.navBar ul {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.navBar ul li {
+    list-style-type: none;
+    margin: 1rem;
+    color: white;
+    text-transform: uppercase;
+}
+
+.navBar a {
+    margin: 1rem;
+    color: white;
+    text-transform: uppercase;
+}
+
+.navBar a:hover {
+    color: rgb(192, 167, 167);
+    font-weight: 900;
+}
+
+.menuItem {
+    list-style-type: none;
+    padding: 10px;
+    color: white;
+    text-transform: uppercase;
+    text-decoration: none;
+
+}
+
+.inicio {
+    grid-area: inicio;
+    display: flex;
+    background-color: rgb(222, 207, 193);
+    justify-items: center;
+    flex-direction: column;
+    align-items: center;
+}
+
+.imgInicio {
+    width: 100%;
+    height: 80%;
+}
+
+.tituloInicio {
+    display: flex;
+    margin: 10px;
+    padding: 10px;
+    align-content: space-between;
+    justify-content: space-around;
+    align-items: flex-end;
+}
+
+.textoInicio {
+    display: flex;
+    margin: 10px;
+    padding: 10px;
+    align-content: space-between;
+    justify-content: space-around;
+    align-items: flex-end;
+    text-align: justify;
+}
+
+.btnInicio {
+    display: flex;
+    margin: 30px;
+    padding: 10px;
+    justify-items: center;
+}
+
+.aside {
+    grid-area: aside;
+    display: flex;
+    background-image: url(../img/foto1.jpeg);
+    justify-items: center;
+    flex-direction: column;
+    align-items: center;
+}
+
+.tituloAside {
+    display: flex;
+    margin: 10px;
+    padding: 10px;
+    align-content: space-between;
+    justify-content: space-around;
+    align-items: flex-end;
+}
+
+.textoAside {
+    display: flex;
+    margin: 10px;
+    padding: 10px;
+    align-content: stretch;
+    justify-content: space-around;
+    align-items: center;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    text-align: justify;
+}
+
+.btnAside {
+    display: flex;
+    margin: 20px;
+    padding: 10px;
+    justify-items: center;
+}
+
+.galeria {
+    grid-area: galeria;
+    background-color: rgb(222, 207, 193);
+}
+
+.imgGaleria {
+    width: 33%;
+    padding: 20px;
+}
+
+.footer {
+    grid-area: footer;
+    background-color: rgb(222, 207, 193);
+    align-items: center;
+    display: grid;
+    grid-gap: 10px;
+    grid-template-columns: (3, 1fr);
+    grid-template-rows: repeat (3, auto);
+    grid-template-areas:
+        "logo texto texto"
+        "logo encontranos redes"
+}
+
+.logoPalFooter {
+    grid-area: logo;
+    width: 200px;
+    padding: 10px;
+    margin-right: 20px;
+}
+
+.texto {
+    grid-area: texto;
+    padding-inline-end: 25px;
+    text-align: justify;
+}
+
+.encontranos {
+    grid-area: encontranos;
+    padding: 5px;
+}
+
+.encontranos ul li {
+    list-style-type: none;
+}
+
+.redes {
+    grid-area: redes;
+    padding: 5px;
+}
+
+.redes ul li {
+    list-style-type: none;
+}
+
+.contenedorQuienes {
+    width: 99%;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    margin: 5px auto;
+    display: grid;
+    grid-gap: 10px;
+    grid-template-columns: (3, 1fr);
+    grid-template-rows: repeat (3, auto);
+    grid-template-areas:
+        "header header header"
+        "quienes quienes quienes"
+        "footer footer footer"
+}
+
+.quienes {
+    grid-area: quienes;
+    display: flex;
+    background-color: rgb(222, 207, 193);
+    justify-items: center;
+    flex-direction: column;
+    align-items: center;
+}
+
+.quienes p {
+    padding: 61px;
+    text-align: justify;
+    padding-inline-start: 68px;
+}
+
+@media (max-width: 768px) {
+    .menuItem {
+        padding: 0px;
+        flex-wrap: wrap;
+    }
+
+    .imgGaleria {
+        width: 31%;
+        padding-left: 38px;
+    }
+}
+
+@media(max-width:375px) {
+    .navBar ul {
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    .logoPpal {
+        width: 100px;
+    }
+
+    .imgGaleria {
+        width: 32%;
+        padding-left: 0px;
+        padding-right: 5px;
+    }
+
+    .footer {
+        grid-template-areas:
+            "texto texto texto"
+            "texto texto texto"
+            "logo encontranos redes"
+    }
+
+    .texto {
+        padding-inline-start: 25px;
+        padding-top: 5px;
+    }
+
+    .logoPalFooter {
+        width: 130px;
+        margin: 0px;
+    }
+
+    .encontranos {
+        margin: 4px;
+    }
+
+    .redes {
+        margin: 4px;
+    }
+}
